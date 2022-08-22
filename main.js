@@ -1,5 +1,6 @@
 let color ='black';
 let click= false;
+let error= document.querySelector('error')
 
 function populateBoard(size){
     //Set important variables
@@ -23,10 +24,12 @@ populateBoard(64);
 
 function changeSize(input){
     if(input>=2 && input<=100){
+        document.getElementById("error").textContent = ''
+
         populateBoard(input); 
     }
     else{
-        console.log('too many squares');
+        document.getElementById("error").textContent = 'Error! Size must be between 2 and 100.'
     }
 }
 // this makes it so that when the mouse hovers over a square, the color of the square changes.

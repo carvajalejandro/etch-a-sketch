@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body class="body">
         <div class = "flex-container">
             <div class ="title"><hi>Sketch Pad</hi></div>
             <div class ="instructions"> Instructions
@@ -33,16 +33,16 @@
             <input 
                 type="text" 
                 placeholder="Size of Grid" 
-                value="64" 
+                value="" 
                 onchange="changeSize(this.value)"
                 />
                 <button>Set Size</button>
                 </div>
+                <div class="error" id="error">
+                </div>
             </div>
         </div>
-    <div class="error">
-        Error! Size must be between 2 and 100.
-    </div>
+   
     </body>
     <script src="main.js"></script>
 </html>
