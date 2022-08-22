@@ -1,7 +1,5 @@
-.gridRow {
-    border: 1px solid black;
-}
-
-.cell {
-    border: 1px solid black;
+.board{
+    width: 500px;
+    height: 500px;
+    display: grid;
 }
