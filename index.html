@@ -11,6 +11,14 @@
     <body>
         <div class = "flex-container">
             <div class ="title"><hi>Sketch Pad</hi></div>
+            <div class ="instructions"> Instructions
+                <div>
+                    This is Not a Hold the Mouse to Color!!! <br> 
+                    You can switch between Not Coloring and Coloring by clicking anywhere on your screen!<br>
+                    Please select the color you want to use! <br>
+                    Once you are ready to start, simply Click on your mouse to activate "Coloring Mode".</div>
+            </div>
+
             <dive class="mode">Mode: Not Coloring</dive>
             <div class ="content">
                 <div class="board" id="'board"></div>
@@ -25,13 +33,16 @@
             <input 
                 type="text" 
                 placeholder="Size of Grid" 
-                value="" 
+                value="64" 
                 onchange="changeSize(this.value)"
                 />
                 <button>Set Size</button>
                 </div>
             </div>
         </div>
+    <div class="error">
+        Error! Size must be between 2 and 100.
+    </div>
     </body>
     <script src="main.js"></script>
 </html>
