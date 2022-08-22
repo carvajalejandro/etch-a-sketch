@@ -11,6 +11,7 @@
     <body>
         <div class = "flex-container">
             <div class ="title"><hi>Sketch Pad</hi></div>
+            <dive class="mode">Mode: Not Coloring</dive>
             <div class ="content">
                 <div class="board"></div>
              <div class="buttons">
@@ -18,7 +19,7 @@
                 <button onclick= "changeColor('white')">Erasor</button>
                 <button onclick= "changeColor('grey')">Grey</button>
                 <button onclick="changeColor('random')">Random</button>
-                <button>Reset</button>
+                <button onclick="resetBoard()">Reset</button>
              </div>
             <div>
             <input 
