@@ -13,10 +13,10 @@
             <div class ="title"><hi>Sketch Pad</hi></div>
             <dive class="mode">Mode: Not Coloring</dive>
             <div class ="content">
-                <div class="board"></div>
+                <div class="board" id="'board"></div>
              <div class="buttons">
                 <button onclick= "changeColor('black')">Black</button>
-                <button onclick= "changeColor('white')">Erasor</button>
+                <button onclick= "changeColor('white')">Eraser</button>
                 <button onclick= "changeColor('grey')">Grey</button>
                 <button onclick="changeColor('random')">Random</button>
                 <button onclick="resetBoard()">Reset</button>
@@ -25,7 +25,7 @@
             <input 
                 type="text" 
                 placeholder="Size of Grid" 
-                value="16" 
+                value="" 
                 onchange="changeSize(this.value)"
                 />
                 <button>Set Size</button>

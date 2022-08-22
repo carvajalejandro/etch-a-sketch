@@ -9,7 +9,7 @@ let squares = board.querySelectorAll('div')
 squares.forEach((div) => div.remove());
 board.style.gridTemplateColumns= `repeat(${size}, 1fr)`;
 board.style.gridTemplateRows= `repeat(${size}, 1fr)`;
-
+board.style.border = "2px solid black";
 //start of code
 let amount =size * size;
 for(i=0;i<amount;i++){
@@ -19,7 +19,7 @@ for(i=0;i<amount;i++){
     board.insertAdjacentElement("beforeend",square);
     }
 }
-populateBoard(16);
+populateBoard(64);
 
 function changeSize(input){
     if(input>=2 && input<=100){
@@ -42,7 +42,6 @@ function colorSquare(){
 function changeColor(choice){
     color= choice;
 }
-
 function resetBoard(){
     let board = document.querySelector(".board");
     let squares = board.querySelectorAll('div')
