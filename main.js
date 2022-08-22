@@ -1,3 +1,5 @@
+let color ='grey';
+
 function populateBoard(size){
     //Set important variables
 let board = document.querySelector(".board");
@@ -10,11 +12,8 @@ board.style.gridTemplateRows= `repeat(${size}, 1fr)`;
 //start of code
 let amount =size * size;
 for(i=0;i<amount;i++){
-    let square= document.createElement('div');
-// this makes it so that when the mouse hovers over a square, the color of the square changes.
-    square.addEventListener('mouseover', ()=> {
-        square.style.backgroundColor= 'black';
-    });
+    let square= document.createElement("div");
+    square.addEventListener('mouseover', colorSquare);
     square.style.backgroundColor='white';
     board.insertAdjacentElement("beforeend",square);
     }
@@ -29,3 +28,15 @@ function changeSize(input){
         console.log('too many squares');
     }
 }
+// this makes it so that when the mouse hovers over a square, the color of the square changes.
+function colorSquare(){
+    if (color ==='random'){
+    this.style.backgroundColor= `hsl(${Math.random()* 360}, 100%, 50%)`;
+    } else{
+    this.style.backgroundColor= color;
+    }
+}
+function changeColor(choice){
+    color= choice;
+}
+
